@@ -2,6 +2,7 @@ package net.get900.pixelpirates;
 
 import net.fabricmc.api.ModInitializer;
 import net.get900.pixelpirates.block.ModBlocks;
+import net.get900.pixelpirates.entity.ModEntities;
 import net.get900.pixelpirates.item.ModItemGroups;
 import net.get900.pixelpirates.item.ModItems;
 import net.get900.pixelpirates.sound.ModSounds;
@@ -18,5 +19,6 @@ public class PixelPirates implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModSounds.registerSounds();
+		ModEntities.registerModEntities();
 	}
 }

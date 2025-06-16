@@ -22,8 +22,8 @@ public class ModItemGroups {
                         entries.add(ModItems.DAGGER);
                         entries.add(ModItems.DYNAMITE);
                         entries.add(ModItems.CANNON_BALL);
-                        entries.add(ModItems.SHIP);
-                        entries.add(ModItems.PIRATE_HAT);
+                        entries.add(ModItems.SHIP_ITEM);
+                        //entries.add(ModItems.PIRATE_HAT);
                         entries.add(ModItems.GROG);
                         entries.add(ModItems.ROPE);
                         entries.add(ModItems.RAW_SHARK_MEAT);

@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.get900.pixelpirates.PixelPirates;
 import net.get900.pixelpirates.block.ModBlocks;
 import net.get900.pixelpirates.item.custom.GrogItem;
+import net.get900.pixelpirates.item.custom.ShipItem;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -18,7 +19,6 @@ public class ModItems {
     public static final Item KRAKEN_INK = registerItem("kraken_ink", new Item(new FabricItemSettings()));
     public static final Item DYNAMITE = registerItem("dynamite", new Item(new FabricItemSettings()));
     public static final Item CANNON_BALL = registerItem("cannon_ball", new Item(new FabricItemSettings()));
-    public static final Item SHIP = registerItem("ship", new Item(new FabricItemSettings()));
     public static final Item ROPE = registerItem("rope", new Item(new FabricItemSettings()));
     public static final Item CANNON = registerItem("cannon", new Item(new FabricItemSettings()));
     public static final Item SAIL = registerItem("sail", new Item(new FabricItemSettings()));
@@ -26,6 +26,9 @@ public class ModItems {
     public static final Item MAST = registerItem("mast", new Item(new FabricItemSettings()));
 
     //Special items
+
+    public static final Item SHIP_ITEM = Registry.register(Registries.ITEM, new Identifier(PixelPirates.MOD_ID, "ship_item"),
+            new ShipItem(new FabricItemSettings().maxCount(1)));
 
     //Food items
     public static final Item GROG = Registry.register(Registries.ITEM, new Identifier(PixelPirates.MOD_ID, "grog"),
@@ -39,8 +42,6 @@ public class ModItems {
     //Tool items
 
     //Armor items
-    public static final Item PIRATE_HAT = registerItem("pirate_hat",
-            new ArmorItem(ArmorMaterials.LEATHER, EquipmentSlot.HEAD, new FabricItemSettings().maxCount(1)));
 
     //Weapon items
     public static final Item CUTLASS = registerItem("cutlass",
@@ -55,8 +56,8 @@ public class ModItems {
         entries.add(DAGGER);
         entries.add(DYNAMITE);
         entries.add(CANNON_BALL);
-        entries.add(SHIP);
-        entries.add(PIRATE_HAT);
+        entries.add(SHIP_ITEM);
+        //entries.add(PIRATE_HAT);
         entries.add(ROPE);
         entries.add(RAW_SHARK_MEAT);
         entries.add(KRAKEN_INK);
