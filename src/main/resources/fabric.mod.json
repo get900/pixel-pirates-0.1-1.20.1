@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "pixelpirates",
+	"version": "${version}",
+	"name": "Pixel Pirates",
+	"description": "Pirates are coming for your booty",
+	"authors": [
+		"Get900"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/pixelpirates/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.get900.pixelpirates.PixelPirates"
+		],
+		"client": [
+			"net.get900.pixelpirates.PixelPiratesClient"
+		],
+		"fabric-datagen": [
+			"net.get900.pixelpirates.PixelPiratesDataGenerator"
+		]
+	},
+	"mixins": [
+		"pixelpirates.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

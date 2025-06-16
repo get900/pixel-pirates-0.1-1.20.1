@@ -1,0 +1,14 @@
+{
+  "barrel_fuse": {
+    "category": "block",
+    "sounds": [{ "name": "pixelpirates:barrel_fuse", "stream": false }]
+  },
+  "barrel_explosion": {
+    "category": "block",
+    "sounds": [{ "name": "pixelpirates:barrel_explosion", "stream": false }]
+  },
+  "fuse_extinguish": {
+    "category": "block",
+    "sounds": [{ "name": "pixelpirates:fuse_extinguish", "stream": false }]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "pixelpirates:block/gunpowder_barrel" },
+    "lit=true": { "model": "pixelpirates:block/gunpowder_barrel_lit" }
+  }
+}
