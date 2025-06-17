@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.get900.pixelpirates.PixelPirates;
 import net.get900.pixelpirates.block.ModBlocks;
 import net.get900.pixelpirates.item.custom.GrogItem;
+import net.get900.pixelpirates.item.custom.RaftItem;
 import net.get900.pixelpirates.item.custom.ShipItem;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
@@ -29,6 +30,8 @@ public class ModItems {
 
     public static final Item SHIP_ITEM = Registry.register(Registries.ITEM, new Identifier(PixelPirates.MOD_ID, "ship_item"),
             new ShipItem(new FabricItemSettings().maxCount(1)));
+    public static final Item RAFT_ITEM = Registry.register(Registries.ITEM, new Identifier(PixelPirates.MOD_ID, "raft_item"),
+            new RaftItem(new FabricItemSettings().maxCount(1)));
 
     //Food items
     public static final Item GROG = Registry.register(Registries.ITEM, new Identifier(PixelPirates.MOD_ID, "grog"),
@@ -57,6 +60,7 @@ public class ModItems {
         entries.add(DYNAMITE);
         entries.add(CANNON_BALL);
         entries.add(SHIP_ITEM);
+        entries.add(RAFT_ITEM);
         //entries.add(PIRATE_HAT);
         entries.add(ROPE);
         entries.add(RAW_SHARK_MEAT);
