@@ -23,6 +23,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DYNAMITE);
                         entries.add(ModItems.CANNON_BALL);
                         entries.add(ModItems.SHIP_ITEM);
+                        entries.add(ModItems.RAFT_ITEM);
                         //entries.add(ModItems.PIRATE_HAT);
                         entries.add(ModItems.GROG);
                         entries.add(ModItems.ROPE);

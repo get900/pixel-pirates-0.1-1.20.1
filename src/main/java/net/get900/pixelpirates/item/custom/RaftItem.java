@@ -32,7 +32,7 @@ public class RaftItem extends Item {
         if (!world.isClient) {
             RaftEntity raft = new RaftEntity(ModEntities.RAFT, world);
             raft.refreshPositionAndAngles(
-                    user.getX(), user.getY(), user.getZ(),
+                    user.getX(), user.getY() + 1.0, user.getZ(),
                     user.getYaw(), 0
             );
             world.spawnEntity(raft);
