@@ -5,6 +5,7 @@ import net.get900.pixelpirates.block.ModBlocks;
 import net.get900.pixelpirates.entity.ModEntities;
 import net.get900.pixelpirates.item.ModItemGroups;
 import net.get900.pixelpirates.item.ModItems;
+import net.get900.pixelpirates.network.ModNetworking;
 import net.get900.pixelpirates.sound.ModSounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,5 +21,6 @@ public class PixelPirates implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModSounds.registerSounds();
 		ModEntities.registerModEntities();
+		ModNetworking.registerC2SPackets();
 	}
 }

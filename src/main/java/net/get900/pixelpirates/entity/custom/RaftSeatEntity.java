@@ -28,10 +28,21 @@ public class RaftSeatEntity extends Entity {
     protected void writeCustomDataToNbt(NbtCompound nbt) {}
 
     @Override
+    public void tick() {
+        super.tick();
+
+        // Optional: reposition to match parent raft
+        if (getVehicle() != null) {
+            Entity raft = this.getVehicle();
+            this.setPosition(raft.getX(), raft.getY() + 0.5, raft.getZ());
+        }
+    }
+
+    @Override
     public ActionResult interact(PlayerEntity player, Hand hand) {
         System.out.println("RaftSeatEntity: Player attempted to interact!");
 
-        if (!this.getWorld().isClient && !hasPassenger(player)) {
+        if (!this.getWorld().isClient && !this.getPassengerList().contains(player)) {
             player.startRiding(this);
         }
 
@@ -42,7 +53,6 @@ public class RaftSeatEntity extends Entity {
     public boolean canAddPassenger(Entity passenger) {
         return getPassengerList().isEmpty();
     }
-
 
     @Override
     public boolean isCollidable() {
@@ -56,11 +66,26 @@ public class RaftSeatEntity extends Entity {
 
     @Override
     public Packet<ClientPlayPacketListener> createSpawnPacket() {
-        return new EntitySpawnS2CPacket(this);
+        return new EntitySpawnS2CPacket(this); // Used by default if custom sync isn't needed
     }
 
     @Override
     public boolean damage(net.minecraft.entity.damage.DamageSource source, float amount) {
+        return false;
+    }
+
+    @Override
+    public boolean shouldSave() {
+        return true;
+    }
+
+    @Override
+    public boolean isAlive() {
+        return true;
+    }
+
+    @Override
+    public boolean isInvisible() {
         return false;
     }
 }

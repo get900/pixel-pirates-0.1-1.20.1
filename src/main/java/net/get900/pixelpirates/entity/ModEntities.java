@@ -27,7 +27,7 @@ public class ModEntities {
             Registries.ENTITY_TYPE,
             new Identifier(PixelPirates.MOD_ID, "raft"),
             FabricEntityTypeBuilder.create(SpawnGroup.MISC, RaftEntity::new)
-                    .dimensions(EntityDimensions.fixed(7.0f, 0.25f)) // or whatever your hitbox is
+                    .dimensions(EntityDimensions.fixed(7.0f, 0.25f))
                     .trackRangeBlocks(100)
                     .trackedUpdateRate(1)
                     .build()
@@ -37,7 +37,7 @@ public class ModEntities {
             Registries.ENTITY_TYPE,
             new Identifier(PixelPirates.MOD_ID, "raft_seat"),
             FabricEntityTypeBuilder.create(SpawnGroup.MISC, RaftSeatEntity::new)
-                    .dimensions(EntityDimensions.fixed(1.5f, 0.25f)) // adjust for testing
+                    .dimensions(EntityDimensions.fixed(1.5f, 1.25f)) // adjust for testing
                     .trackRangeBlocks(90)
                     .trackedUpdateRate(1)
                     .build()
